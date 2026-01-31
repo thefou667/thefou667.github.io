@@ -1,1 +1,5 @@
-
+.container {
+    max-width: none !important;
+    background-image: https://i.postimg.cc/m2w9p32c/background.jpg;
+    background-position: center 0;
+}
