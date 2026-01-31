@@ -12,9 +12,10 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: #eaeaea;
     overflow-x: hidden;
+   }
 
 background:
-   max-width: none !important;
+   max-width: none;
    background-image: "https://i.postimg.cc/m2w9p32c/background.jpg"
    background-position: center 0;
 }
