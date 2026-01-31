@@ -1,5 +1,133 @@
-.container {
-    max-width: none !important;
-    background-image: https://i.postimg.cc/m2w9p32c/background.jpg;
-    background-position: center 0;
+/* =========================
+   BASE
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    color: #eaeaea;
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(circle at top, rgba(255,255,255,0.08), transparent 40%),
+        url("https://i.postimg.cc/m2w9p32c/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* =========================
+   TYPOGRAPHIE
+========================= */
+
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255,255,255,0.35);
+}
+
+p {
+    line-height: 1.7;
+    color: #dddddd;
+}
+
+/* =========================
+   CONTENEUR GLASS
+========================= */
+
+.content {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 40px;
+
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+
+    box-shadow:
+        0 0 40px rgba(0,0,0,0.7),
+        inset 0 0 20px rgba(255,255,255,0.05);
+}
+
+/* =========================
+   CIEL ÉTOILÉ
+========================= */
+
+.sky {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Étoiles fixes */
+.sky::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(1px 1px at 10% 20%, white, transparent),
+        radial-gradient(1px 1px at 30% 80%, white, transparent),
+        radial-gradient(1px 1px at 50% 40%, white, transparent),
+        radial-gradient(1px 1px at 70% 60%, white, transparent),
+        radial-gradient(1px 1px at 90% 30%, white, transparent);
+    opacity: 0.6;
+    animation: twinkle 6s infinite alternate;
+}
+
+@keyframes twinkle {
+    from { opacity: 0.4; }
+    to   { opacity: 0.8; }
+}
+
+/* =========================
+   ÉTOILES FILANTES
+========================= */
+
+.shooting {
+    position: absolute;
+    top: -20%;
+    width: 2px;
+    height: 120px;
+    background: linear-gradient(
+        transparent,
+        rgba(255,255,255,0.9),
+        transparent
+    );
+    opacity: 0;
+    transform: rotate(45deg);
+    animation: shooting-star 7s linear infinite;
+}
+
+.shooting1 {
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.shooting2 {
+    left: 55%;
+    animation-delay: 2.5s;
+}
+
+.shooting3 {
+    left: 80%;
+    animation-delay: 5s;
+}
+
+@keyframes shooting-star {
+    0% {
+        transform: translateY(0) translateX(0) rotate(45deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(130vh) translateX(-250px) rotate(45deg);
+        opacity: 0;
+    }
 }
