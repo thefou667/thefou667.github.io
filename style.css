@@ -1,5 +1,5 @@
 .container {
-    max-width: none !important;
+    max-width: none;
     background-image: url(https://i.postimg.cc/m2w9p32c/background.jpg);
     background-position: center 0;
 }
