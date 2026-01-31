@@ -13,10 +13,10 @@ body {
     color: #eaeaea;
     overflow-x: hidden;
 
-    background:
-        radial-gradient(circle at top, rgba(255,255,255,0.08), transparent 40%),
-        url("https://i.postimg.cc/m2w9p32c/background.jpg") no-repeat center center fixed;
-    background-size: cover;
+background:
+   max-width: none !important;
+   background-image: "https://i.postimg.cc/m2w9p32c/background.jpg"
+   background-position: center 0;
 }
 
 /* =========================
